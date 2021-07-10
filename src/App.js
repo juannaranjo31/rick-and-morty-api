@@ -33,11 +33,11 @@ function App() {
 			<figure className='logo'>
 				<img src={Logo} alt='Logo de Rick & Morty' />
 			</figure>
-			{/* form filtrar */}
+			{/* form filter */}
 			<SearchBox filter={filter} setFilter={setFilter} />
-			{/* form filtrar */}
+			{/* form filter */}
 
-			{/* section personajes */}
+			{/* section characters */}
 			<section className='characters-list'>
 				{loading ? (
 					<p>Cargando...</p>
@@ -47,12 +47,12 @@ function App() {
 					))
 				) : (
 					<p>
-						No se encontro personajes con la busqueda{' '}
+						No characters found with your search{' '}
 						<strong>"{filter}"</strong>.
 					</p>
 				)}
 			</section>
-			{/* section personajes */}
+			{/* section characters */}
 		</div>
 	)
 }
