@@ -34,7 +34,7 @@ function App() {
 				<img src={Logo} alt='Logo de Rick & Morty' />
 			</figure>
 			{/* form filtrar */}
-			<Filtrar filter={filter} setFilter={setFilter} />
+			<SearchBox filter={filter} setFilter={setFilter} />
 			{/* form filtrar */}
 
 			{/* section personajes */}
