@@ -67,8 +67,6 @@ input {
   grid-template: 10rem auto / 1fr;
   overflow: hidden;
   animation: showCard 0.5s linear;
-  width: 35rem;
-  margin: 1.5rem;
 }
 @keyframes showCard {
   from {

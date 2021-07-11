@@ -38,7 +38,7 @@ function App() {
       {/* form filter */}
 
       {/* section characters */}
-      <section className="characters-list">
+      <section className="list-characters">
         {loading ? (
           <p>loading...</p>
         ) : CharactersFilter.length > 0 ? (
