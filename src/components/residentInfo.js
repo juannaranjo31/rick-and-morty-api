@@ -1,6 +1,6 @@
 import React from "react";
 
-export const residentInfo = ({character}) => {
+export const ResidentInfo = ({character}) => {
   return (
     <section className="character">
       <div className="character-header">
@@ -24,4 +24,4 @@ export const residentInfo = ({character}) => {
   );
 };
 
-export default residentInfo;
+export default ResidentInfo;

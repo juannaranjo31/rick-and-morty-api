@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Logo from "./assets/logo.png";
 import { SearchBox } from "./components/SearchBox";
-import { residentInfo } from "./components/residentInfo";
+import { ResidentInfo } from "./components/ResidentInfo";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -43,7 +43,7 @@ function App() {
           <p>loading...</p>
         ) : CharactersFilter.length > 0 ? (
           CharactersFilter.map((character) => (
-            <residentInfo key={character.id} personaje={character} />
+            <ResidentInfo key={character.id} character={character} />
           ))
         ) : (
           <p>

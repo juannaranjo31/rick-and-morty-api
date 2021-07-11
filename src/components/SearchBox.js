@@ -1,5 +1,5 @@
 import React from "react";
-import {Card} from './residentInfo';
+import {residentInfo} from './ResidentInfo';
 
 export const SearchBox = ({ filter, setFilter }) => {
   const handleInput = ({ target }) => {

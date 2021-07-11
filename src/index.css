@@ -59,7 +59,7 @@ input {
   gap: 4rem;
 }
 
-.Character {
+.character {
   background: var(--color-secondary);
   border-radius: 0.3rem;
   box-shadow: 0 0 1rem 0 rgba(255, 255, 255, 0.1);
@@ -67,6 +67,8 @@ input {
   grid-template: 10rem auto / 1fr;
   overflow: hidden;
   animation: showCard 0.5s linear;
+  width: 35rem;
+  margin: 1.5rem;
 }
 @keyframes showCard {
   from {
@@ -78,7 +80,7 @@ input {
   padding: 2rem;
   text-align: right;
 }
-.estate {
+.state {
   background: var(--color-secondary);
   display: inline-flex;
   color: var(--color-light);
@@ -90,7 +92,7 @@ input {
   align-items: center;
   column-gap: 1rem;
 }
-.estate span {
+.state span {
   display: block;
   height: 1rem;
   width: 1rem;
