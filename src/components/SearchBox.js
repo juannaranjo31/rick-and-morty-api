@@ -10,11 +10,12 @@ export const SearchBox = ({ filter, setFilter }) => {
     <section className="filter">
       <input
         type="text"
-        placeholder="Character Name"
+        placeholder="Location ID"
         name="Search"
         onChange={handleInput}
         value={filter}
       />
+      <button className="searchButton">Search</button>
     </section>
   );
 };

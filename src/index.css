@@ -42,6 +42,7 @@ body {
   max-width: 60rem;
   margin: 0 auto;
   margin-bottom: 4rem;
+  display: flex;
 }
 input {
   height: 4rem;
@@ -50,6 +51,21 @@ input {
   padding: 0 1rem;
   outline: var(--color-primary);
   width: 100%;
+}
+
+.searchButton{
+  height: 4rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+  background-color: #08b2c9;
+  margin-left: 1rem;
+  color: #ffff;
+  border: none;
+}
+
+.searchButton:hover{
+  background-color: #047a8a;
+  cursor: pointer;
 }
 
 .list-characters {

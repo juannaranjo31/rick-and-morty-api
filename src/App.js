@@ -16,6 +16,7 @@ function App() {
         );
         const data = await response.json();
         setCharacters(data.results);
+        console.log(characters);
         setLoading(false);
       } catch (error) {
         console.log(error);
