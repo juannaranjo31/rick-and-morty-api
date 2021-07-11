@@ -1,19 +1,23 @@
-import React from 'react'
+import React from "react";
+import {Card} from './residentInfo';
 
 export const SearchBox = ({ filter, setFilter }) => {
-	const handleInput = ({ target }) => {
-		setFilter(target.value)
-	}
+  const handleInput = ({ target }) => {
+    setFilter(target.value);
+  };
 
-	return (
-		<section className='filter'>
-			<input
-				type='text'
-				placeholder='Character Name'
-				name='Search'
-				onChange={handleInput}
-				value={filter}
-			/>
-		</section>
-	)
-}
+  return (
+    <section className="filter">
+      <input
+        type="text"
+        placeholder="Character Name"
+        name="Search"
+        onChange={handleInput}
+        value={filter}
+      />
+    </section>
+  );
+};
+
+
+export default SearchBox;

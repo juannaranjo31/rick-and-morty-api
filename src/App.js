@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Logo from "./assets/logo.png";
 import { SearchBox } from "./components/SearchBox";
-import { Card } from "./components/Card";
+import { residentInfo } from "./components/residentInfo";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -15,7 +15,7 @@ function App() {
           "https://rickandmortyapi.com/api/character"
         );
         const data = await response.json();
-        setPersonajes(data.results);
+        setCharacters(data.results);
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -40,10 +40,10 @@ function App() {
       {/* section characters */}
       <section className="characters-list">
         {loading ? (
-          <p>Cargando...</p>
+          <p>loading...</p>
         ) : CharactersFilter.length > 0 ? (
           CharactersFilter.map((character) => (
-            <Card key={character.id} personaje={character} />
+            <residentInfo key={character.id} personaje={character} />
           ))
         ) : (
           <p>
