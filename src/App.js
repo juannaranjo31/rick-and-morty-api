@@ -23,6 +23,7 @@ function App() {
       }
     };
     getCharacters();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const CharactersFilter = characters.filter((character) =>

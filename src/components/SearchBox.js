@@ -1,5 +1,6 @@
 import React from "react";
-import {residentInfo} from './ResidentInfo';
+// eslint-disable-next-line
+import { ResidentInfo } from "./ResidentInfo";
 
 export const SearchBox = ({ filter, setFilter }) => {
   const handleInput = ({ target }) => {
@@ -19,6 +20,5 @@ export const SearchBox = ({ filter, setFilter }) => {
     </section>
   );
 };
-
 
 export default SearchBox;
