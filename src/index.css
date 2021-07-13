@@ -68,14 +68,22 @@ input {
   cursor: pointer;
 }
 
-.list-characters {
+.loc-container {
   width: 100%;
   display: grid;
   grid-template: auto / 1fr;
   gap: 4rem;
 }
 
+.chac-container{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 .character {
+  display: inline-block;
+  width: 35rem;
   background: var(--color-secondary);
   border-radius: 0.3rem;
   box-shadow: 0 0 1rem 0 rgba(255, 255, 255, 0.1);
@@ -83,6 +91,7 @@ input {
   grid-template: 10rem auto / 1fr;
   overflow: hidden;
   animation: showCard 0.5s linear;
+  margin: 1rem;
 }
 @keyframes showCard {
   from {

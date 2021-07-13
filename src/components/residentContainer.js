@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ResidentInfo from "./residentInfo";
+import ResidentInfo from "./ResidentInfo";
+import {getResidentsInfo} from "../services/api";
 
 export default function ResidentContainer ({dataUrl}) {
     let [resident, setResident] = useState("");

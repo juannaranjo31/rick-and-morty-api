@@ -1,23 +1,23 @@
 import React from "react";
 
-export const ResidentInfo = ({character}) => {
+export const ResidentInfo = ({residentData}) => {
   return (
     <section className="character">
       <div className="character-header">
         <div className="state">
-          <span className={character.status}></span>
-          <h4>{character.status}</h4>
+          <span className={residentData.status}></span>
+          <h4>{residentData.status}</h4>
         </div>
       </div>
 
       <div className="character-body">
         <figure>
-          <img src={character.image} alt={character.name} />
+          <img src={residentData.image} alt={residentData.name} />
         </figure>
 
-        <h2>{character.name}</h2>
+        <h2>{residentData.name}</h2>
         <p>
-          {character.species} <span>-</span> {character.gender}
+          {residentData.species} <span>-</span> {residentData.gender}
         </p>
       </div>
     </section>

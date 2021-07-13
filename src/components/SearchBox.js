@@ -1,23 +1,24 @@
-import React from "react";
+import {useForm} from "react-hook-form";
 // eslint-disable-next-line
-import { ResidentInfo } from "./ResidentInfo";
 
-export const SearchBox = ({ filter, setFilter }) => {
-  const handleInput = ({ target }) => {
-    setFilter(target.value);
-  };
+export const SearchBox = ({inputMethod}) => {
+  const { register, handleSubmit, reset } = useForm();
+
+  const getInputId = (data) => {
+    inputMethod(data.locationId);
+    reset({
+      locationId: ""
+    });
+  }
 
   return (
-    <section className="filter">
+    <form onSubmit={handleSubmit(getInputId)} className="filter">
       <input
-        type="text"
-        placeholder="Location ID"
-        name="Search"
-        onChange={handleInput}
-        value={filter}
+        type="number"
+        placeholder="Location ID" {...register("locationId", {min:0})}
       />
       <button className="searchButton">Search</button>
-    </section>
+    </form>
   );
 };
 

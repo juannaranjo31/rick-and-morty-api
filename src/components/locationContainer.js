@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import LocationInfo from "./locationInfo";
-import ResidentsContainer from "./residentContainer";
+import LocationInfo from "./LocationInfo";
+import ResidentsContainer from "./ResidentContainer";
+import {getGeneralInfo} from "../services/api";
 
-export default function LocationContainer1({ inputData }) {
+export default function LocationContainer({ inputData }) {
   const [locationInfo, setLocationInfo] = useState(false);
   const [residentsInfo, setResidentsInfo] = useState([]);
 
@@ -20,6 +21,8 @@ export default function LocationContainer1({ inputData }) {
   return (
     <div className="loc-container">
       {locationInfo && <LocationInfo locationData={locationInfo} />}
+
+      <div className="chac-container">
       {residentsInfo.map((elementUrl) => (
         <ResidentsContainer
           key={
@@ -28,6 +31,7 @@ export default function LocationContainer1({ inputData }) {
           dataUrl={elementUrl}
         />
       ))}
+      </div>
     </div>
   );
 }
